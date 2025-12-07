@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FocusFlow - Pitch Deck</title>
+
+        <!-- Reveal.js Styles -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/theme/black.min.css"
+            id="theme"
+        />
+
+        <!-- Tailwind CSS for custom styling inside slides -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- FontAwesome for Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
+        <style>
+            /* Custom Overrides for Pitch Deck Look */
+            .reveal .slides section {
+                text-align: left;
+            }
+            .reveal h1,
+            .reveal h2,
+            .reveal h3 {
+                text-transform: none;
+                font-family: "Montserrat", sans-serif;
+            }
+            .gradient-text {
+                background: linear-gradient(90deg, #4f46e5, #06b6d4);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .card {
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                padding: 20px;
+                backdrop-filter: blur(10px);
+            }
+            .notes-hint {
+                position: fixed;
+                bottom: 10px;
+                left: 10px;
+                font-size: 12px;
+                color: gray;
+                z-index: 1000;
+                font-family: sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="notes-hint">Press 'S' for Speaker View (Script)</div>
+
+        <div class="reveal">
+            <div class="slides">
+                <!-- SLIDE 1: Title -->
+                <section
+                    data-background-gradient="linear-gradient(to bottom right, #0f172a, #1e1b4b)"
+                >
+                    <div
+                        class="flex flex-col items-center justify-center h-full text-center"
+                    >
+                        <div class="mb-6">
+                            <i
+                                class="fa-solid fa-layer-group text-6xl text-cyan-400"
+                            ></i>
+                        </div>
+                        <h1 class="text-6xl font-bold mb-2">
+                            Focus<span class="text-cyan-400">Flow</span>
+                        </h1>
+                        <h3
+                            class="text-2xl text-gray-300 font-light tracking-widest uppercase mb-8"
+                        >
+                            An AI-Powered App for Better Productivity
+                        </h3>
+                        <div
+                            class="border-t border-gray-600 pt-4 mt-8 w-1/2 mx-auto"
+                        >
+                            <p class="text-sm text-gray-400">
+                                Created by: Damian Pakosiński and Szymon Profic
+                            </p>
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+                        Presenter A: Welcome everyone! Today we would like to
+                        present our project called FocusFlow.<br />
+                        Presenter B: It’s an AI-powered productivity app
+                        designed to help people stay focused, organized, and
+                        efficient.
+                    </aside>
+                </section>
+
+                <!-- SLIDE 2: What is FocusFlow? -->
+                <section>
+                    <div class="grid grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h2 class="text-4xl font-bold mb-6">
+                                What Is
+                                <span class="gradient-text">FocusFlow</span>?
+                            </h2>
+                            <ul class="space-y-4 text-xl list-none ml-0">
+                                <li class="flex items-center">
+                                    <i
+                                        class="fa-solid fa-check-circle text-green-400 mr-3"
+                                    ></i>
+                                    Productivity & Time-management
+                                </li>
+                                <li class="flex items-center">
+                                    <i
+                                        class="fa-solid fa-robot text-purple-400 mr-3"
+                                    ></i>
+                                    Powered by Artificial Intelligence
+                                </li>
+                                <li class="flex items-center">
+                                    <i
+                                        class="fa-solid fa-mobile-screen text-blue-400 mr-3"
+                                    ></i>
+                                    Mobile & Desktop Sync
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex justify-center">
+                            <!-- Mockup Representation -->
+
+                            <img src="mock1.png" alt="mock of application" />
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+                        A: FocusFlow is a productivity app that supports users
+                        in managing tasks more effectively.<br />
+                        B: Thanks to AI, it learns your habits and helps you
+                        stay focused throughout the day.
+                    </aside>
+                </section>
+
+                <!-- SLIDE 3: The Problem -->
+                <section>
+                    <h2 class="text-3xl font-bold mb-8 text-center">
+                        Why We Need Help:
+                        <span class="gradient-text">The Data</span>
+                    </h2>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="card text-center">
+                            <i
+                                class="fa-solid fa-stopwatch text-red-400 text-4xl mb-4"
+                            ></i>
+                            <h4 class="text-4xl font-bold mb-2">47 Sec</h4>
+                            <p
+                                class="text-xs text-gray-400 uppercase tracking-widest mb-2"
+                            >
+                                Attention Span
+                            </p>
+                            <p class="text-lg text-gray-300">
+                                Average time spent on a screen before switching
+                                <br />
+                                focus (Dr. Gloria Mark).
+                            </p>
+                        </div>
+                        <div class="card text-center">
+                            <i
+                                class="fa-solid fa-hourglass-half text-orange-400 text-4xl mb-4"
+                            ></i>
+                            <h4 class="text-4xl font-bold mb-2">23 Min</h4>
+                            <p
+                                class="text-xs text-gray-400 uppercase tracking-widest mb-2"
+                            >
+                                Recovery Time
+                            </p>
+                            <p class="text-lg text-gray-300">
+                                Time required to fully refocus after a single
+                                interruption.
+                            </p>
+                        </div>
+                        <div class="card text-center">
+                            <i
+                                class="fa-solid fa-chart-line-down text-pink-400 text-4xl mb-4"
+                            ></i>
+                            <h4 class="text-4xl font-bold mb-2">40%</h4>
+                            <p
+                                class="text-xs text-gray-400 uppercase tracking-widest mb-2"
+                            >
+                                Productivity Loss
+                            </p>
+                            <p class="text-lg text-gray-300">
+                                Decrease in efficiency caused by multitasking.
+                            </p>
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+                        A: Research confirms we are in a crisis. Studies show
+                        the average attention span on a screen is now just 47
+                        seconds.<br />
+                        B: And worse, once interrupted, it takes about 23
+                        minutes to get back on track. We are losing 40% of our
+                        productivity to digital noise.
+                    </aside>
+                </section>
+
+                <!-- SLIDE 4: Target Users -->
+                <section>
+                    <h2 class="text-4xl font-bold mb-10 text-center">
+                        Target Users
+                    </h2>
+                    <div class="flex justify-around items-center">
+                        <div class="flex flex-col items-center">
+                            <div class="bg-blue-600 rounded-full p-6 mb-4">
+                                <i
+                                    class="fa-solid fa-graduation-cap text-3xl text-white"
+                                ></i>
+                            </div>
+                            <span class="text-lg">Students</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="bg-purple-600 rounded-full p-6 mb-4">
+                                <i
+                                    class="fa-solid fa-laptop-house text-3xl text-white"
+                                ></i>
+                            </div>
+                            <span class="text-lg">Remote Workers</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="bg-green-600 rounded-full p-6 mb-4">
+                                <i
+                                    class="fa-solid fa-code text-3xl text-white"
+                                ></i>
+                            </div>
+                            <span class="text-lg">Programmers</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="bg-orange-600 rounded-full p-6 mb-4">
+                                <i
+                                    class="fa-solid fa-briefcase text-3xl text-white"
+                                ></i>
+                            </div>
+                            <span class="text-lg">Professionals</span>
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+                        A: Our main target users are students who want to
+                        improve their study habits.<br />
+                        B: But FocusFlow works for anyone who needs structure:
+                        programmers, remote workers, and busy professionals.
+                    </aside>
+                </section>
+
+                <!-- SLIDE 5: Basic Features -->
+                <section>
+                    <div class="flex items-center">
+                        <div class="w-1/2">
+                            <h2 class="text-3xl font-bold mb-6">
+                                Core Features
+                            </h2>
+                            <ul class="space-y-6">
+                                <li
+                                    class="flex items-center p-4 bg-gray-800 rounded-lg"
+                                >
+                                    <i
+                                        class="fa-solid fa-list-check text-2xl text-cyan-400 mr-4"
+                                    ></i>
+                                    <span>Smart To-Do List</span>
+                                </li>
+                                <li
+                                    class="flex items-center p-4 bg-gray-800 rounded-lg"
+                                >
+                                    <i
+                                        class="fa-regular fa-clock text-2xl text-cyan-400 mr-4"
+                                    ></i>
+                                    <span>Focus Timer (Pomodoro)</span>
+                                </li>
+                                <li
+                                    class="flex items-center p-4 bg-gray-800 rounded-lg"
+                                >
+                                    <i
+                                        class="fa-solid fa-bell text-2xl text-cyan-400 mr-4"
+                                    ></i>
+                                    <span>Daily Reminders</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-1/2 pl-10 text-center">
+                            <img src="mock2.png" alt="mock of app" />
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+                        A: The app includes a simple, smart to-do list and a
+                        built-in focus timer.<br />
+                        B: We kept the interface clean and easy to use, so it
+                        doesn’t distract the user.
+                    </aside>
+                </section>
+
+                <!-- SLIDE 6: Advanced AI Features -->
+                <section data-background-color="#0f172a">
+                    <div
+                        class="relative h-[600px] w-full flex items-center justify-center"
+                    >
+                        <!-- Central Brain -->
+                        <div
+                            class="absolute z-10 bg-gray-900 border-4 border-purple-500 rounded-full p-8 shadow-[0_0_50px_rgba(168,85,247,0.5)]"
+                        >
+                            <i
+                                class="fa-solid fa-brain text-6xl text-purple-400"
+                            ></i>
+                        </div>
+
+                        <!-- Nodes -->
+                        <div class="absolute top-10 left-10 w-1/3 text-right">
+                            <h4 class="text-xl text-purple-300 font-bold">
+                                Prioritization
+                            </h4>
+                            <p class="text-lg">
+                                Reorganizes tasks based on deadlines.
+                            </p>
+                        </div>
+
+                        <div class="absolute top-10 right-10 w-1/3 text-left">
+                            <h4 class="text-xl text-purple-300 font-bold">
+                                Breakdown
+                            </h4>
+                            <p class="text-lg">
+                                Splits big tasks into small steps.
+                            </p>
+                        </div>
+
+                        <div
+                            class="absolute bottom-20 left-10 w-1/3 text-right"
+                        >
+                            <h4 class="text-xl text-purple-300 font-bold">
+                                Energy Scheduling
+                            </h4>
+                            <p class="text-lg">Matches tasks to your mood.</p>
+                        </div>
+
+                        <div
+                            class="absolute bottom-20 right-10 w-1/3 text-left"
+                        >
+                            <h4 class="text-xl text-purple-300 font-bold">
+                                Insights
+                            </h4>
+                            <p class="text-lg">
+                                Weekly productivity analytics.
+                            </p>
+                        </div>
+
+                        <!-- Connecting lines (simulated with CSS borders/hr) -->
+                    </div>
+
+                    <aside class="notes">
+                        A: Here’s where AI becomes powerful. The app reorganizes
+                        your tasks based on importance and deadlines.<br />
+                        B: It can also break big tasks into smaller steps and
+                        analyze your productivity patterns to give personalized
+                        suggestions.
+                    </aside>
+                </section>
+
+                <!-- SLIDE 7: Collaboration -->
+                <section>
+                    <h2 class="text-3xl font-bold mb-8 text-center">
+                        Collaboration & Sync
+                    </h2>
+                    <div class="flex items-center justify-center gap-12">
+                        <div class="text-center">
+                            <i
+                                class="fa-solid fa-users text-5xl text-blue-400 mb-4"
+                            ></i>
+                            <p>Shared Projects</p>
+                        </div>
+                        <div class="text-4xl text-gray-600">+</div>
+                        <div class="text-center">
+                            <i
+                                class="fa-solid fa-cloud-arrow-up text-5xl text-blue-400 mb-4"
+                            ></i>
+                            <p>Cloud Backup</p>
+                        </div>
+                        <div class="text-4xl text-gray-600">+</div>
+                        <div class="text-center">
+                            <i
+                                class="fa-solid fa-laptop-mobile text-5xl text-blue-400 mb-4"
+                            ></i>
+                            <p>Multi-Device</p>
+                        </div>
+                    </div>
+                    <div
+                        class="mt-12 p-4 bg-blue-900/30 rounded-lg text-center"
+                    >
+                        <p class="text-lg">
+                            <i class="fa-solid fa-robot mr-2"></i> AI suggests
+                            optimal task distribution for teams.
+                        </p>
+                    </div>
+
+                    <aside class="notes">
+                        A: The app supports teamwork. Users can work together on
+                        shared projects.<br />
+                        B: All data syncs across devices, so you can switch from
+                        phone to laptop anytime.
+                    </aside>
+                </section>
+
+                <!-- SLIDE 9: Gamification -->
+                <section>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="flex flex-col justify-center">
+                            <h2 class="text-3xl font-bold mb-4">
+                                Gamification
+                            </h2>
+                            <p class="mb-4">
+                                Building habits shouldn't be boring.
+                            </p>
+                            <ul class="text-lg space-y-2">
+                                <li>
+                                    <i
+                                        class="fa-solid fa-trophy text-yellow-500 mr-2"
+                                    ></i>
+                                    Weekly Challenges
+                                </li>
+                                <li>
+                                    <i
+                                        class="fa-solid fa-fire text-orange-500 mr-2"
+                                    ></i>
+                                    Streak Tracking
+                                </li>
+                                <li>
+                                    <i
+                                        class="fa-solid fa-medal text-gray-400 mr-2"
+                                    ></i>
+                                    Badges
+                                </li>
+                            </ul>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-gray-800 rounded-xl p-6"
+                        >
+                            <div class="w-full mb-4">
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span>Level 5 Focus</span>
+                                    <span>80%</span>
+                                </div>
+                                <div
+                                    class="w-full bg-gray-700 rounded-full h-2.5"
+                                >
+                                    <div
+                                        class="bg-yellow-400 h-2.5 rounded-full"
+                                        style="width: 80%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <i
+                                class="fa-solid fa-award text-6xl text-yellow-500"
+                            ></i>
+                            <p class="mt-4 font-bold text-yellow-500">
+                                Focus Master
+                            </p>
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+                        A: To make productivity more engaging, we added
+                        gamification features.<br />
+                        B: Users receive points, badges, and weekly goals — all
+                        to motivate them to build good habits.
+                    </aside>
+                </section>
+
+                <!-- SLIDE 10: Summary -->
+                <section>
+                    <div class="grid grid-cols-2 gap-0 h-full">
+                        <div
+                            class="bg-gray-800 p-8 flex flex-col justify-center"
+                        >
+                            <h3 class="text-2xl font-bold mb-4 text-cyan-400">
+                                Summary
+                            </h3>
+                            <ul class="space-y-4 text-sm">
+                                <li>
+                                    <i
+                                        class="fa-solid fa-check text-green-500 mr-2"
+                                    ></i>
+                                    AI-Powered Solution
+                                </li>
+                                <li>
+                                    <i
+                                        class="fa-solid fa-check text-green-500 mr-2"
+                                    ></i>
+                                    Reduces Stress
+                                </li>
+                                <li>
+                                    <i
+                                        class="fa-solid fa-check text-green-500 mr-2"
+                                    ></i>
+                                    Task + Habit Management
+                                </li>
+                            </ul>
+                        </div>
+                        <div
+                            class="bg-gray-900 p-8 flex flex-col justify-center border-l border-gray-700"
+                        >
+                            <h3 class="text-2xl font-bold mb-4 text-purple-400">
+                                Future Plans
+                            </h3>
+                            <ul class="space-y-4 text-sm">
+                                <li>
+                                    <i class="fa-regular fa-calendar mr-2"></i>
+                                    Calendar Integrations
+                                </li>
+                                <li>
+                                    <i
+                                        class="fa-solid fa-wand-magic-sparkles mr-2"
+                                    ></i>
+                                    Predictive AI Module
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-microphone mr-2"></i>
+                                    Offline Voice Commands
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h2 class="text-4xl font-bold">Thank You!</h2>
+                    </div>
+
+                    <aside class="notes">
+                        A: To sum up, FocusFlow is our idea of a smart
+                        productivity assistant powered by AI.<br />
+                        B: In the future, we want to integrate more advanced
+                        features and make it even more adaptive.<br />
+                        Both: Thank you for listening!
+                    </aside>
+                </section>
+            </div>
+        </div>
+
+        <!-- Reveal.js Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/notes/notes.min.js"></script>
+
+        <script>
+            Reveal.initialize({
+                hash: true,
+                transition: "slide", // none/fade/slide/convex/concave/zoom
+                plugins: [RevealNotes],
+            });
+        </script>
+    </body>
+</html>
